@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 # Use the official Ruby image with version 3.2.0
 FROM ruby:3.2.0
 
@@ -43,4 +45,3 @@ EXPOSE 3000
 
 # Command to run the server
 CMD ["rails", "server", "-b", "0.0.0.0"]
-

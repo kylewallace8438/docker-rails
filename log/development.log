@@ -154,3 +154,16 @@ Processing by WhalesController#index as TURBO_STREAM
 Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 2356)
 
 
+Started GET "/" for 172.18.0.1 at 2024-12-03 08:04:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WhalesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering whales/index.html.erb within layouts/application
+  [1m[36mWhale Load (0.2ms)[0m  [1m[34mSELECT "whales".* FROM "whales"[0m
+  ↳ app/views/whales/index.html.erb:6
+  Rendered whales/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1609)
+  Rendered layout layouts/application.html.erb (Duration: 223.2ms | Allocations: 79911)
+Completed 200 OK in 246ms (Views: 227.9ms | ActiveRecord: 0.2ms | Allocations: 87565)
+
+

@@ -1,0 +1,83 @@
+Started GET "/" for 172.18.0.1 at 2024-12-03 08:12:52 +0000
+Processing by WhalesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering whales/index.html.erb within layouts/application
+  Rendered whales/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 3305)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3366)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms | Allocations: 16762)
+Started GET "/" for 172.18.0.1 at 2024-12-03 08:28:55 +0000
+Processing by WhalesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering whales/index.html.erb within layouts/application
+  [1m[36mWhale Load (0.4ms)[0m  [1m[34mSELECT "whales".* FROM "whales"[0m
+  Rendered whales/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 5847)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5903)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 3.2ms | Allocations: 19299)
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateWhales (20240710193146)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "whales" ("id" bigserial primary key, "name" character varying, "facts" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20240710193146"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2024-12-03 08:29:06.931534"], ["updated_at", "2024-12-03 08:29:06.931534"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2024-12-03 08:29:09 +0000
+Processing by WhalesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering whales/index.html.erb within layouts/application
+  [1m[36mWhale Load (2.0ms)[0m  [1m[34mSELECT "whales".* FROM "whales"[0m
+  Rendered whales/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 709)
+  Rendered layout layouts/application.html.erb (Duration: 228.1ms | Allocations: 77444)
+Completed 200 OK in 231ms (Views: 227.8ms | ActiveRecord: 2.0ms | Allocations: 77726)
+Started GET "/whales/new" for 172.18.0.1 at 2024-12-03 08:29:10 +0000
+Processing by WhalesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering whales/new.html.erb within layouts/application
+  Rendered whales/_form.html.erb (Duration: 18.8ms | Allocations: 2591)
+  Rendered whales/new.html.erb within layouts/application (Duration: 20.7ms | Allocations: 2890)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 3668)
+Completed 200 OK in 54ms (Views: 24.3ms | ActiveRecord: 11.3ms | Allocations: 8332)
+Started GET "/whales" for 172.18.0.1 at 2024-12-03 08:29:11 +0000
+Processing by WhalesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering whales/index.html.erb within layouts/application
+  [1m[36mWhale Load (0.7ms)[0m  [1m[34mSELECT "whales".* FROM "whales"[0m
+  Rendered whales/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 1076)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.7ms | Allocations: 1300)
+Started GET "/whales/new" for 172.18.0.1 at 2024-12-03 08:29:12 +0000
+Processing by WhalesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering whales/new.html.erb within layouts/application
+  Rendered whales/_form.html.erb (Duration: 10.4ms | Allocations: 694)
+  Rendered whales/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 759)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 1536)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/whales" for 172.18.0.1 at 2024-12-03 08:30:59 +0000
+Processing by WhalesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering whales/index.html.erb within layouts/application
+  [1m[36mWhale Load (0.2ms)[0m  [1m[34mSELECT "whales".* FROM "whales"[0m
+  Rendered whales/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 5592)
+  Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 35656)
+Completed 200 OK in 59ms (Views: 39.8ms | ActiveRecord: 2.7ms | Allocations: 49102)
+Started GET "/whales" for 172.18.0.1 at 2024-12-03 08:31:10 +0000
+Processing by WhalesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering whales/index.html.erb within layouts/application
+  [1m[36mWhale Load (0.2ms)[0m  [1m[34mSELECT "whales".* FROM "whales"[0m
+  Rendered whales/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5616)
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 35622)
+Completed 200 OK in 60ms (Views: 41.8ms | ActiveRecord: 2.8ms | Allocations: 49068)
